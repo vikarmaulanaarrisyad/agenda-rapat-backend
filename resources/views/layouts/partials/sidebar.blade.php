@@ -91,10 +91,20 @@
                         </ul>
                     </li>
                 @endcan
+                @can('Kategori Index')
+                    <li class="nav-item">
+                        <a href="{{ route('kategori.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-list"></i>
+                            <p>
+                                Kategori
+                            </p>
+                        </a>
+                    </li>
+                @endcan
+
                 @can('Pengaturan Index')
                     <li class="nav-item">
-                        <a href="{{ route('setting.index') }}"
-                            class="nav-link {{ request()->is('setting*') ? 'active' : '' }}">
+                        <a href="{{ route('setting.index') }}" class="nav-link">
                             <i class="nav-icon fas fa-cogs"></i>
                             <p>
                                 Pengaturan

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\{
     DashboardController,
+    KategoriController,
     PermissionController,
     PermissionGroupController,
     RoleController,
@@ -75,5 +76,10 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('/setting', 'index')->name('setting.index');
             Route::put('/setting/{setting}', 'update')->name('setting.update');
         });
+    });
+
+    Route::group(['middleware' => ['permission:Kategori Index']], function () {
+        Route::get('/kategori/data', [KategoriController::class, 'data'])->name('kategori.data');
+        Route::resource('/kategori', KategoriController::class);
     });
 });
