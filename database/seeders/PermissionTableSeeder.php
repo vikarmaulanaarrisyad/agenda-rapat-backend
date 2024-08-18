@@ -118,6 +118,56 @@ class PermissionTableSeeder extends Seeder
                 'name' => 'Group Permission Delete',
                 'permission_group_id' => PermissionGroup::where('name', 'Group Permission')->first()->id,
             ],
+
+            [
+                'name' => 'Kategori Index',
+                'permission_group_id' => PermissionGroup::where('name', 'Kategori')->first()->id,
+            ],
+            [
+                'name' => 'Kategori Store',
+                'permission_group_id' => PermissionGroup::where('name', 'Kategori')->first()->id,
+            ],
+            [
+                'name' => 'Kategori Show',
+                'permission_group_id' => PermissionGroup::where('name', 'Kategori')->first()->id,
+            ],
+            [
+                'name' => 'Kategori Edit',
+                'permission_group_id' => PermissionGroup::where('name', 'Kategori')->first()->id,
+            ],
+            [
+                'name' => 'Kategori Update',
+                'permission_group_id' => PermissionGroup::where('name', 'Kategori')->first()->id,
+            ],
+            [
+                'name' => 'Kategori Delete',
+                'permission_group_id' => PermissionGroup::where('name', 'Kategori')->first()->id,
+            ],
+
+            [
+                'name' => 'Agenda Index',
+                'permission_group_id' => PermissionGroup::where('name', 'Agenda')->first()->id,
+            ],
+            [
+                'name' => 'Agenda Store',
+                'permission_group_id' => PermissionGroup::where('name', 'Agenda')->first()->id,
+            ],
+            [
+                'name' => 'Agenda Show',
+                'permission_group_id' => PermissionGroup::where('name', 'Agenda')->first()->id,
+            ],
+            [
+                'name' => 'Agenda Edit',
+                'permission_group_id' => PermissionGroup::where('name', 'Agenda')->first()->id,
+            ],
+            [
+                'name' => 'Agenda Update',
+                'permission_group_id' => PermissionGroup::where('name', 'Agenda')->first()->id,
+            ],
+            [
+                'name' => 'Agenda Delete',
+                'permission_group_id' => PermissionGroup::where('name', 'Agenda')->first()->id,
+            ],
             [
                 'name' => 'Pengaturan Index',
                 'permission_group_id' => PermissionGroup::where('name', 'Pengaturan')->first()->id,

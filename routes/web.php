@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\{
+    AgendaController,
     DashboardController,
     KategoriController,
     PermissionController,
@@ -80,6 +81,12 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::group(['middleware' => ['permission:Kategori Index']], function () {
         Route::get('/kategori/data', [KategoriController::class, 'data'])->name('kategori.data');
+        Route::get('/kategori/search', [KategoriController::class, 'search'])->name('kategori.search');
         Route::resource('/kategori', KategoriController::class);
+    });
+
+    Route::group(['middleware' => ['permission:Agenda Index']], function () {
+        Route::get('/agenda/data', [AgendaController::class, 'data'])->name('agenda.data');
+        Route::resource('/agenda', AgendaController::class);
     });
 });

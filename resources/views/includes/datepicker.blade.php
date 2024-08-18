@@ -17,6 +17,14 @@
             locale: 'id'
         });
 
+        $('.timepicker').datetimepicker({
+            icons: {
+                time: 'far fa-clock'
+            },
+            format: 'HH:mm',
+            locale: 'id'
+        });
+
         $('.datetimepicker').datetimepicker({
             icons: {
                 time: 'far fa-clock'
