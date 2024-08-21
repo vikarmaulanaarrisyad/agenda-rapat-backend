@@ -73,6 +73,7 @@ class UserController extends Controller
                 'name' => $request->name,
                 'username' => $request->username,
                 'email' => $request->email,
+                'type' => $request->type,
                 'password' => Hash::make($request->password),
             ]);
 
@@ -143,6 +144,7 @@ class UserController extends Controller
                 'name' => $request->name,
                 'username' => $request->username,
                 'email' => $request->email,
+                'type' => $request->type,
             ];
 
             $users->update($data);

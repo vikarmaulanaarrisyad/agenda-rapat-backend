@@ -49,6 +49,18 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="type">To</label>
+                <select name="type" id="type" class="form-control">
+                    <option value="" disabled selected>Pilih salah satu</option>
+                    <option value="puspaga">Puspaga</option>
+                    <option value="fantri">Fantri</option>
+                </select>
+            </div>
+        </div>
+    </div>
 
     <x-slot name="footer">
         <button type="button" onclick="submitForm(this.form)" class="btn btn-sm btn-outline-info" id="submitBtn">

@@ -52,7 +52,19 @@
                 <select name="kategori" id="kategori" class="form-control select2"></select>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-6">
+            <div class="form-group">
+                <label for="type">To</label>
+                <select name="type" id="type" class="form-control">
+                    <option value="" disabled selected>Pilih salah satu</option>
+                    <option value="puspaga">Puspaga</option>
+                    <option value="fantri">Fantri</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
             <div class="form-group">
                 <label for="tempat_kegiatan">Tempat Kegiatan</label>
                 <input type="text" class="form-control" name="tempat_kegiatan" id="tempat_kegiatan"

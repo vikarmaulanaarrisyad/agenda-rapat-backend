@@ -15,7 +15,7 @@ class AgendaController extends Controller
         return datatables($query)
             ->addIndexColumn()
             ->editColumn('nama_kegiatan', function ($query) {
-                return wordwrap($query->nama_kegiatan, 40, '<br>', true);
+                return wordwrap($query->nama_kegiatan, 40, '<br>', true) . '<br><small class="badge badge-primary">'  . $query->type . '</small>';
             })
             ->editColumn('kategori', function ($query) {
                 return $query->kategori->nama;
@@ -55,6 +55,7 @@ class AgendaController extends Controller
             'tanggal' => 'required|date_format:Y-m-d',
             'waktu_mulai' => 'required|date_format:H:i',
             'kategori' => 'required',
+            'type' => 'required',
             'tempat_kegiatan' => 'required',
         ];
 
@@ -96,8 +97,9 @@ class AgendaController extends Controller
         $rules = [
             'nama_kegiatan' => 'required',
             'tanggal' => 'required|date_format:Y-m-d',
-            'waktu_mulai' => 'required|date_format:H:i',
+            'waktu_mulai' => 'required',
             'kategori' => 'required',
+            'type' => 'required',
             'tempat_kegiatan' => 'required',
         ];
 
